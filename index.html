@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WatchCraft - Crafting Time</title>
+  <link rel="stylesheet" href="watch-style.css" />
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+.header {
+  background: linear-gradient(145deg, #111, #333);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.navbar {
+  background: #222;
+  padding: 0.8rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.curved {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+button {
+  padding: 0.7rem 1.5rem;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+button:hover {
+  background: #444;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+.hidden {
+  display: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1rem;
+}
+input {
+  padding: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+.footer {
+  background: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>⌚ WatchCraft</h1>
+    <p>Your Time, Perfectly Crafted</p>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#creation">Creation</a></li>
+      <li><a href="#repair">Repair</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="creation" class="card curved">
+      <h2>Watch Creation Process</h2>
+      <p>Each timepiece is a blend of precision and art. Here's how:</p>
+      <ul class="steps-list">
+        <li>1. Designing & Prototyping</li>
+        <li>2. Metal Molding & Gearing</li>
+        <li>3. Movement Assembly</li>
+        <li>4. Case Fitting & Final Polish</li>
+        <li>5. Quality Check & Packaging</li>
+      </ul>
+    </section>
+    <section id="repair" class="card curved">
+      <h2>Repair & Replacement</h2>
+      <p>If your watch is damaged, our experts can fix:</p>
+      <ul>
+        <li>Strap replacement</li>
+        <li>Glass & dial repair</li>
+        <li>Battery & movement issues</li>
+      </ul>
+    </section>
+    <section id="pricing" class="card curved">
+      <h2>Click to Show Estimated Repair Costs</h2>
+      <button onclick="togglePricing()" id="showPriceBtn">Show Prices</button>
+      <table id="priceTable" class="hidden">
+        <thead>
+          <tr><th>Service</th><th>Estimated Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Battery Replacement</td><td>$15</td></tr>
+          <tr><td>Glass Change</td><td>$40</td></tr>
+          <tr><td>Strap Replacement</td><td>$25</td></tr>
+          <tr><td>Full Servicing</td><td>$120</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="contact" class="card curved">
+      <h2>Find a Watch Service Center</h2>
+      <form id="contactForm">
+        <label for="city">Enter Your City:</label>
+        <input type="text" id="city" placeholder="e.g., Lahore" required />
+        <button type="submit">Search</button>
+      </form>
+      <ul id="shopList"></ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 WatchCraft. Crafted with HTML, CSS & JS.</p>
+  </footer>
+  <script src="watch-script.js"></script>
+</body>
+</html>

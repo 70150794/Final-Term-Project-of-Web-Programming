@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+.header {
+  background: linear-gradient(145deg, #111, #333);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.navbar {
+  background: #222;
+  padding: 0.8rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.curved {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+button {
+  padding: 0.7rem 1.5rem;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+button:hover {
+  background: #444;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+.hidden {
+  display: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1rem;
+}
+input {
+  padding: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+.footer {
+  background: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
